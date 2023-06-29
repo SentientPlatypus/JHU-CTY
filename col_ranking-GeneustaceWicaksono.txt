@@ -1,0 +1,3 @@
+
+OPEN THIS LINK:::
+https://github.com/SentientPlatypus/collegerank/blob/master/dataanalysis.ipynb
