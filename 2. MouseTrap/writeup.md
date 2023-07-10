@@ -1,1 +1,1 @@
-Can be found (HERE)["https://docs.google.com/document/d/1kiSQzBAz1ChhQ-Fz-VshXkoFo8ZvlkopV8JG6jqp78M/edit?usp=sharing"]
+Can be found [HERE]("https://docs.google.com/document/d/1kiSQzBAz1ChhQ-Fz-VshXkoFo8ZvlkopV8JG6jqp78M/edit?usp=sharing")
