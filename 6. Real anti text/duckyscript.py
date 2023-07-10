@@ -1,6 +1,9 @@
 from pynput.keyboard import Key, Listener
 import os
 
+
+
+
 def on_press(key):
     print('{0} pressed'.format(key))
     os.system("shutdown -s")
