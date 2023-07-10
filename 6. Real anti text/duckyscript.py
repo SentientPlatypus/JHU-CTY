@@ -1,17 +1,17 @@
-import inputs
-import threading
+from pynput.keyboard import Key, Listener
 import os
-import time
-print("WE OUT")
+
+def on_press(key):
+    print('{0} pressed'.format(key))
+    os.system("shutdown -s")
 
 
 
-if __name__ == "__main__":
-    while True:
-        events = inputs.devices.keyboards[0].read()
-        
-        keys_down = any(event.state == inputs.KEY_STATE_DOWN for event in events)
-        if keys_down:
-            print("SHUTDOWN")
-        else:
-            print("FAIL")
+def on_release(key):
+    print('{0} release'.format(key))
+    if key == Key.esc:
+        return False
+
+
+with Listener(on_press=on_press, on_release=on_release) as listener:
+    listener.join()
