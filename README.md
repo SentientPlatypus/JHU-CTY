@@ -4,7 +4,6 @@ This is a repository of turned in work for the Center for Talented Youth at John
 
 This course was taught by <br>
 > [Dr. Manuela Badea](https://www.linkedin.com/in/manuela-codruta-badea-phd-0952644)
-<br>
 
 > TA. Yarin C.A.
 
