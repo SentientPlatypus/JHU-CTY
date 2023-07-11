@@ -96,6 +96,7 @@ while 1:
 
         if checkCoords(landmarks, x, y, w, h):
             print("INJECT")
+            cv2.putText(image, f"INJECT SCRIPT", (200, 200), cv2.FONT_HERSHEY_COMPLEX,1, (255, 0, 0), 2)
             #injecter.inject()
             # os.system("6. Real anti text\inject.bin")
             # os.system("6. Real anti text\duckypayload.txt")
