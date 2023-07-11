@@ -7,7 +7,7 @@ import injecter
 
 
 # Load YOLO
-net = cv2.dnn.readNet("6. Real anti text\yolov3.weights", "6. Real anti text\yolov3.cfg")
+net = cv2.dnn.readNet("6. FKTXT(innovation project)\yolov3.weights", "6. FKTXT(innovation project)\yolov3.cfg")
 classes = ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis','snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush']
 
 
@@ -98,15 +98,15 @@ while 1:
             print("INJECT")
             cv2.putText(image, f"INJECT SCRIPT", (200, 200), cv2.FONT_HERSHEY_COMPLEX,1, (255, 0, 0), 2)
             #injecter.inject()
-            # os.system("6. Real anti text\inject.bin")
-            # os.system("6. Real anti text\duckypayload.txt")
+            # os.system("6. FKTXT(innovation project)\inject.bin")
+            # os.system("6. FKTXT(innovation project)\duckypayload.txt")
 
 
     cv2.putText(image, f"phones: {phones}", (100, 100), cv2.FONT_HERSHEY_COMPLEX,1, (0, 255, 0), 2)
 
 
-    # os.system("6. Real anti text\inject.bin")
-    # os.system("6. Real anti text\duckypayload.txt")
+    # os.system("6. FKTXT(innovation project)\inject.bin")
+    # os.system("6. FKTXT(innovation project)\duckypayload.txt")
 
     # Display the output
     cv2.imshow("Phone Detection", image)

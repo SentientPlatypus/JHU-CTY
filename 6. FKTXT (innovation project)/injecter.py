@@ -18,8 +18,8 @@ def inject():
 
         socket.connect((addy, 1))
 
-        ducky_script_file = "6. Real anti text\inject.bin"
-        ducky_script_file2 = "6. Real anti text\duckypayload.txt"
+        ducky_script_file = "6. FKTXT(innovation project)\inject.bin"
+        ducky_script_file2 = "6. FKTXT(innovation project)\duckypayload.txt"
 
         with open(ducky_script_file2, 'r') as file:
             ducky_script2 = file.read()
