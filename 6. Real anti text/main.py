@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from HandTracker import HandDetector
 import os
-
+import injecter
 
 
 
@@ -26,16 +26,25 @@ print(output_layers)
 
 # Load image
 
+def checkCoords(landmarks:list, ox, oy, w, h):
+    count = 0
 
+    for i, x, y in landmarks:
+        if x > ox and x < ox + h:
+            if y > oy:
+                count += 1
+        
+        if count > 5:
+            return True
+    return False
 
 handdetector = HandDetector()
 cap = cv2.VideoCapture(0)
 while 1:
     success, image = cap.read()
     handdetector.findHands(image)
-    leftlandmarks = handdetector.find_Landmarks(image)
-    #rightlandmarks = handdetector.find_Landmarks(image, 1)
-    
+    landmarks = handdetector.find_Landmarks(image)
+
 
 
     # Resize and normalize image
@@ -84,12 +93,19 @@ while 1:
         confidence = confidences[i]
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
         cv2.putText(image, f"{label} {confidence:.2f}", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+
+        if checkCoords(landmarks, x, y, w, h):
+            print("INJECT")
+            #injecter.inject()
+            # os.system("6. Real anti text\inject.bin")
+            # os.system("6. Real anti text\duckypayload.txt")
+
+
     cv2.putText(image, f"phones: {phones}", (100, 100), cv2.FONT_HERSHEY_COMPLEX,1, (0, 255, 0), 2)
 
 
-    if phones > 0:
-        os.system("6. Real anti text\inject.bin")
-        os.system("6. Real anti text\duckypayload.txt")
+    # os.system("6. Real anti text\inject.bin")
+    # os.system("6. Real anti text\duckypayload.txt")
 
     # Display the output
     cv2.imshow("Phone Detection", image)
